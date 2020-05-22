@@ -3,6 +3,7 @@ package com.tutorial.main;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.util.Random;
 
 public class EnemyBossBullet extends GameObject{
 
@@ -12,8 +13,9 @@ public class EnemyBossBullet extends GameObject{
 		super(x, y, id);
 		
 		this.handler = handler;
+		Random r = new Random();
 		
-		velX = 5;
+		velX = (r.nextInt(5 - -5) + -5);
 		velY = 5;
 	}
 
@@ -25,8 +27,10 @@ public class EnemyBossBullet extends GameObject{
 		x += velX;
 		y += velY;
 		
-		if(y <= 0 || y >= Game.HEIGHT - 48) velY *= -1;
-		if(x <= 0 || x >= Game.WIDTH - 24) velX *= -1;
+//		if(y <= 0 || y >= Game.HEIGHT - 48) velY *= -1;
+//		if(x <= 0 || x >= Game.WIDTH - 24) velX *= -1;
+		
+		if(y >= Game.HEIGHT) {handler.removeObject(this);}
 		
 		handler.addObject(new Trail(x, y, ID.Trail, Color.red, 16, 16, 0.001f, handler));
 			
