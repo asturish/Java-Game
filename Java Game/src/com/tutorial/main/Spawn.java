@@ -17,7 +17,7 @@ public class Spawn {
 	public void tick() {
 		keepScore++;
 		
-		if(keepScore >= 100) {
+		if(keepScore >= 500) {
 			
 			onScreenDisplay.setLevel(onScreenDisplay.getLevel() + 1);
 			
