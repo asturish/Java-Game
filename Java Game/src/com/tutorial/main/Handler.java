@@ -23,6 +23,9 @@ public class Handler {
 		}
 	}
 
+	public void clearEnemies() {
+		
+	}
 	public void addObject(GameObject object) {
 		this.object.add(object);
 	}
