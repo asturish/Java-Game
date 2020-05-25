@@ -20,7 +20,7 @@ public class EnemyBossBullet extends GameObject{
 	}
 
 	public Rectangle getBounds(){
-		return new Rectangle((int)x, (int)y, 16, 16);
+		return new Rectangle((int)x, (int)y, 5, 5);
 	}
 	
 	public void tick() {
@@ -32,13 +32,13 @@ public class EnemyBossBullet extends GameObject{
 		
 		if(y >= Game.HEIGHT) {handler.removeObject(this);}
 		
-		handler.addObject(new Trail(x, y, ID.Trail, Color.red, 16, 16, 0.001f, handler));
+		handler.addObject(new Trail(x, y, ID.Trail, Color.red, 5, 5, 0.001f, handler));
 			
 	}
 
 	public void render(Graphics g) {
 		g.setColor(Color.red);
-		g.fillRect((int)x, (int)y, 1, 1);
+		g.fillRect((int)x, (int)y, 5, 5);
 	}
 
 }

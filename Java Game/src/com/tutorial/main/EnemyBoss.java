@@ -3,11 +3,13 @@ package com.tutorial.main;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.util.Random;
 
 public class EnemyBoss extends GameObject {
 
 	private Handler handler;
 	private float totalTimer = 260;
+	
 
 	public EnemyBoss(float x, float y, ID id, Handler handler) {
 		super(x, y, id);
@@ -33,7 +35,15 @@ public class EnemyBoss extends GameObject {
 		} else if(totalTimer == 180) {
 			velX += 6;
 			velY -= 2;
+			for(int i = 0; i <= 5; i++) {
+				handler.addObject(new EnemyBossBullet((int)x, (int)y, ID.EnemyBossBullet, handler));
+			}
 			totalTimer--;
+			} else if (totalTimer == 100){
+				for(int i = 0; i <= 5; i++) {
+					handler.addObject(new EnemyBossBullet((int)x, (int)y, ID.EnemyBossBullet, handler));
+				}
+				totalTimer--;				
 			} else{
 				totalTimer--;
 			}
