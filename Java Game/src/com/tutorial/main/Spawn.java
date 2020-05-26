@@ -26,15 +26,15 @@ public class Spawn {
 				keepScore = 0;
 				onScreenDisplay.setScore(keepScore);
 			} else if(onScreenDisplay.getLevel() == 3) {
-				handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.FastEnemy, handler));
+				handler.addObject(new FastEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.BasicEnemy, handler));
 				keepScore = 0;
 				onScreenDisplay.setScore(keepScore);
 			} else if(onScreenDisplay.getLevel() == 5) {
-				handler.addObject(new SmartEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.SmartEnemy, handler));
+				handler.addObject(new SmartEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.BasicEnemy, handler));
 				keepScore = 0;
 				onScreenDisplay.setScore(keepScore);
 			} else if(onScreenDisplay.getLevel() == 7) {
-				handler.addObject(new EnemyBoss((Game.WIDTH) / 2 - 60, -100, ID.EnemyBoss, handler));
+				handler.addObject(new EnemyBoss((Game.WIDTH) / 2 - 60, -100, ID.BasicEnemy, handler));
 				keepScore = 0;
 				onScreenDisplay.setScore(keepScore);
 			}

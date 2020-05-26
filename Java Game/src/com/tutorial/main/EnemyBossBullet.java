@@ -5,12 +5,12 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Random;
 
-public class EnemyBossBullet extends GameObject{
+public class EnemyBossBullet extends BasicEnemy{
 
 	private Handler handler;
 	
 	public EnemyBossBullet(float x, float y, ID id, Handler handler) {
-		super(x, y, id);
+		super(x, y, id, handler);
 		
 		this.handler = handler;
 		Random r = new Random();

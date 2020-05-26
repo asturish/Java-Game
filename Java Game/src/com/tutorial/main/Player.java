@@ -34,7 +34,7 @@ public class Player extends GameObject {
 	public void collision() {
 		for(int i = 0; i < handler.object.size(); i++) {
 			GameObject tempGameObject = handler.object.get(i);
-			if(tempGameObject.getId() == ID.BasicEnemy || tempGameObject.getId() == ID.FastEnemy || tempGameObject.getId() == ID.SmartEnemy ) {
+			if(tempGameObject.getId() == ID.BasicEnemy) {
 
 				if(getBounds().intersects(tempGameObject.getBounds())) {
 					// collision code

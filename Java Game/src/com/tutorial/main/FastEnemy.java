@@ -4,12 +4,12 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class FastEnemy extends GameObject{
+public class FastEnemy extends BasicEnemy{
 
 	private Handler handler;
 	
 	public FastEnemy(float x, float y, ID id, Handler handler) {
-		super(x, y, id);
+		super(x, y, id, handler);
 		
 		this.handler = handler;
 		

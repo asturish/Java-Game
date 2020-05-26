@@ -5,14 +5,14 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Random;
 
-public class EnemyBoss extends GameObject {
+public class EnemyBoss extends BasicEnemy {
 
 	private Handler handler;
 	private float totalTimer = 260;
 	
 
 	public EnemyBoss(float x, float y, ID id, Handler handler) {
-		super(x, y, id);
+		super(x, y, id, handler);
 
 		this.handler = handler;
 
@@ -36,12 +36,12 @@ public class EnemyBoss extends GameObject {
 			velX += 6;
 			velY -= 2;
 			for(int i = 0; i <= 5; i++) {
-				handler.addObject(new EnemyBossBullet((int)x, (int)y, ID.EnemyBossBullet, handler));
+				handler.addObject(new EnemyBossBullet((int)x, (int)y, ID.BasicEnemy, handler));
 			}
 			totalTimer--;
-			} else if (totalTimer == 100){
+			} else if (totalTimer == 110 || totalTimer == 70){
 				for(int i = 0; i <= 5; i++) {
-					handler.addObject(new EnemyBossBullet((int)x, (int)y, ID.EnemyBossBullet, handler));
+					handler.addObject(new EnemyBossBullet((int)x, (int)y, ID.BasicEnemy, handler));
 				}
 				totalTimer--;				
 			} else{

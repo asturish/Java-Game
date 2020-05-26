@@ -4,9 +4,9 @@ public enum ID {
 
 	Player(),
 	BasicEnemy(),
-	FastEnemy(),
-	SmartEnemy(),
-	EnemyBoss(),
-	EnemyBossBullet(),
+//	FastEnemy(),
+//	SmartEnemy(),
+//	EnemyBoss(),
+//	EnemyBossBullet(),
 	Trail();
 }

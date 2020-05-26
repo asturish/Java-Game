@@ -4,13 +4,13 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class SmartEnemy extends GameObject{
+public class SmartEnemy extends BasicEnemy{
 
 	private Handler handler;
 	private GameObject player;
 	
 	public SmartEnemy(float x, float y, ID id, Handler handler) {
-		super(x, y, id);
+		super(x, y, id, handler);
 		
 		this.handler = handler;
 		
